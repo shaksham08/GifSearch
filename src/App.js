@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import CreatePost from "./components/CreatePost";
@@ -11,17 +11,16 @@ function App() {
       message:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, labore ullam ab et, sint ea non quisquam blanditiis ipsa unde repellendus exercitationem optio harum fuga aliquam. Quibusdam voluptatum deserunt aliquam!",
       gifs: [
-        "http://img2.thejournal.ie/inline/2499585/original?width=415&version=2499585",
-        "http://img2.thejournal.ie/inline/2499585/original?width=415&version=2499585",
-        "http://img2.thejournal.ie/inline/2499585/original?width=415&version=2499585",
-        "http://img2.thejournal.ie/inline/2499585/original?width=415&version=2499585",
-        "http://img2.thejournal.ie/inline/2499585/original?width=415&version=2499585",
+        {
+          link: "https://media0.giphy.com/media/26wkHr7f5kbCHOaMo/200w.webp?cid=29a478a3m2er1puv79l57qjrtkq2nztumf0nwxbienita3im&rid=200w.webp&ct=g",
+          id: 12345,
+        },
       ],
     },
   ]);
 
+  //function to add post to final post list
   const addPost = (post) => {
-    console.log("This is post", post);
     setPostList([...postList, post.post]);
   };
 

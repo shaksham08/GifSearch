@@ -21,6 +21,8 @@ export default function CreatePostModal({ modal, toggle, addGifs }) {
             toggle={toggle}
             searchTerm={search}
             addGifs={addGifs}
+            isLoading
+            setIsLoading
           />
         </ModalBody>
       </Modal>

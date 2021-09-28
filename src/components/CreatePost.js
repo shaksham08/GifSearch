@@ -5,17 +5,28 @@ import CreatePostModal from "./CreatePostModal";
 export default function CreatePost({ addPost }) {
   const [post, setPost] = useState({ message: "", gifs: [] });
   const [modal, setModal] = useState(false);
+  //toggle function for modal
   const toggle = () => {
     setModal(!modal);
   };
 
+  //handleChange to set message
   const handleChange = (text) => {
     const gifs = post.gifs;
     setPost({ message: text, gifs });
   };
 
+  //funciton to add gifs selected to the state from modal
   const addGifs = (gifurl) => {
     setPost({ gifs: [...post.gifs, gifurl] });
+  };
+
+  //funciton to call add post
+  const handleAddPost = () => {
+    if (post.message !== "") {
+      addPost({ post });
+      setPost({ message: "", gifs: [] });
+    }
   };
 
   return (
@@ -32,7 +43,7 @@ export default function CreatePost({ addPost }) {
 
       <div className="createpost-container--temp">
         {post.gifs.map((el) => (
-          <img src={el} alt={el} />
+          <img src={el.link} alt={el} key={el.id} />
         ))}
       </div>
 
@@ -40,10 +51,7 @@ export default function CreatePost({ addPost }) {
         <button onClick={() => toggle()} className="btn">
           Search Giphy
         </button>
-        <button
-          onClick={() => post.message !== "" && addPost({ post })}
-          className="btn"
-        >
+        <button onClick={() => handleAddPost()} className="btn">
           Create Post
         </button>
       </div>

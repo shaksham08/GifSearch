@@ -6,7 +6,7 @@ export default function Post({ message = "", gifs = [] }) {
       <p>{message}</p>
       <div className="post-container-gifs">
         {gifs.map((gif) => (
-          <img src={gif} alt={gif} />
+          <img src={gif.link} alt={gif} key={gif.id} />
         ))}
       </div>
     </div>
