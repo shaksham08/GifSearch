@@ -18,7 +18,9 @@ export default function CreatePost({ addPost }) {
 
   //funciton to add gifs selected to the state from modal
   const addGifs = (gifurl) => {
-    setPost({ gifs: [...post.gifs, gifurl] });
+    const message = post.message;
+
+    setPost({ message: message, gifs: [...post.gifs, gifurl] });
   };
 
   //funciton to call add post
