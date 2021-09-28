@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import Gifs from "./Gifs/Gifs";
 
-export default function CreatePostModal({ modal, toggle, addGifs }) {
+export default function SearchGifModal({ modal, toggle, addGifs }) {
   const [search, setSearch] = useState("");
   return (
     <div>

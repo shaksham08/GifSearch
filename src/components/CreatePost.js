@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Avtar from "../images/avtar.png";
-import CreatePostModal from "./CreatePostModal";
+import CreatePostModal from "./SearchGifModal";
 
 export default function CreatePost({ addPost }) {
   const [post, setPost] = useState({ message: "", gifs: [] });
