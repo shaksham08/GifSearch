@@ -9,3 +9,9 @@ Steps to run the application locally
 
 
 LIVE NETLIFY LINK:- https://gifsearchtest.netlify.app/
+
+
+Features:
+
+1. Added debounce technique to minimize unnecessary api calls
+2. Can add multiple gifs image
