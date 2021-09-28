@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.createpost-container {
+  padding: 2rem;
+  border: 1px solid black;
+  margin: 2rem 0;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.createpost-container--post {
+  display: flex;
+  gap: 1rem;
+}
+
+.searchbar {
+  padding: 1.5rem 1rem;
+  width: 100%;
+  border: 2px solid black;
+  display: flex;
+  gap: 15px;
+  cursor: auto;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.avtar {
+  width: 75px;
+  height: 100%;
+  border-radius: 100px;
+}
+
+textarea {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  resize: none;
+  border: 2px solid black;
+  border-radius: 150px;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.createpost-container--button {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.btn {
+  border: 1px solid black;
+  transition: all ease-in-out 0.4s;
+}
+
+.btn:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.post-container {
+  border: 2px solid black;
+  padding: 2rem 3rem;
+  margin-top: 2rem;
+}
+
+.post-container-gifs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post-container-gifs img {
+  width: 165px;
+  overflow: auto;
+}
+
+.gif-search {
+  padding: 0.5rem 1rem;
+}
+
+.gifsearch-container {
+  display: flex;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gifsearch-container img {
+  height: 150px;
+}
+
+.postlist-container {
+  margin-top: 5rem;
+}
+
+.createpost-container--temp {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  margin-left: 6rem;
+  flex-wrap: wrap;
+}
