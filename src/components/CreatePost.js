@@ -25,7 +25,7 @@ export default function CreatePost({ addPost }) {
 
   //funciton to call add post
   const handleAddPost = () => {
-    if (post.message !== "") {
+    if (post.message !== "" || post.gifs.length > 0) {
       addPost({ post });
       setPost({ message: "", gifs: [] });
     }
